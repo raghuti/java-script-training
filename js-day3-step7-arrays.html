@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var arr = [
+            { name : "Batman",  power : 7 },
+            { name : "Superman", power : 8 },
+            { name : "Ironman", power : 6 },
+            { name : "Phantom", power : 5 },
+        ];
+        window.onload = function(){
+            /*
+            for( var i = 0 ; i < arr.length ; i++){
+                // alert(" hello "+ arr[i].name);
+                document.body.innerHTML += "<li>"+arr[i].name+"</li>"
+            };
+            */
+
+            /*
+            arr.forEach(function(value, index, array){
+                document.body.innerHTML += "<li>"+value.name+"</li>"
+            })
+            */
+            /*
+            var maparr = arr.map(function(val, idx, ar){
+                return val.power * 2;
+            });
+            console.log(maparr);// 14,16,12,10
+            */
+           /*
+           var strongheroes = arr.filter(function(v,i,a){
+               return v.power > 6
+            });
+            console.log(strongheroes);
+            */
+           /*
+           var areheroesstrong = arr.some(function(v,i,a){
+               return v.power < 4
+            });
+            console.log(areheroesstrong);
+            */
+           var totalpower = arr.reduce(function(i,val,idx,arr){
+            return i+val.power
+           },0);
+           console.log(totalpower);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

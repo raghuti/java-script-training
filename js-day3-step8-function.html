@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        myfun1();
+        myfun2();
+        
+        function myfun1(){
+            alert("hello there");
+        }
+        var myfun2 = function (){
+            alert("hello there");
+        }
+        */
+       /*
+       console.log(
+           ( {
+               name : "Batman",
+               power : 7
+            } ).power
+        );
+        */
+
+        // (function(){
+        //    console.log("good afternoon everyone") 
+        // }());// IIFE // SIAF
+
+        var batman = {
+            title : "Batman",
+            fname : "Bruce",
+            lname : "Wayne",
+            power : 7,
+            fullname : function(msg, city){
+                return msg+" "+this.fname+" "+this.lname+" from "+city
+            }
+        };
+        var superman = {
+            title : "Superman",
+            fname : "Clark",
+            lname : "Kent",
+            power : 8
+        };
+        var spiderman = {
+            title : "Spiderman",
+            fname : "Peter",
+            lname : "Parker",
+            power : 6
+        };
+        // console.log( batman.fullname() );
+        // console.log( batman.fullname.call(superman, "Hi", "Bangalore") );
+        // console.log( batman.fullname.apply(superman, ["Hi", "Bangalore"]) );
+        var fun = batman.fullname.bind(superman);
+       console.log( fun("Hi", "Bangalore") );
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

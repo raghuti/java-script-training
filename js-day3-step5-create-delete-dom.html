@@ -23,23 +23,27 @@
         var count = 0;
         document.addEventListener("DOMContentLoaded", function(){
             box = document.querySelector(".box");
-            function removeme(evt){
-               // alert(evt.target.innerHTML);
-                if(box.children.length > 0){
+            box.addEventListener("click", clickHandler);
+
+            function clickHandler(evt){
+               // if(evt.target.getAttribute("class") == 'valtech'){
                    box.removeChild(evt.target);
-                }else{
-                    alert("nothing to remove")
-                }
+               // }else{
+               //     alert("nothing to remove")
+               // }
             }
+        
             //-------------------------------------
             document
             .querySelectorAll("button")[0]
             .addEventListener("click", function(){
+                /*
                 var elm = document.createElement("div");
-                    elm.innerHTML = ++count;
-                    elm.setAttribute("class", "valtech")
-                    elm.addEventListener("click", removeme)
-                box.appendChild(elm);
+                elm.innerHTML = ++count;
+                elm.setAttribute("class", "valtech")
+                elm.addEventListener("click", removeme)
+                */
+                box.innerHTML += "<div class='valtech'>"+ ++count  +"</div>";
             });
             //-------------------------------------
             document
