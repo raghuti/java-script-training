@@ -33,11 +33,21 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-            document.getElementById("btn")
-            .addEventListener("click", function(evt){
-                console.log(evt.target.id," was clicked")
-            })
+            document.getElementById("outerBox").addEventListener("click",outerClickHandler, true);
+            document.getElementById("innerBox").addEventListener("click",innerClickHandler, true);
+            document.getElementById("btn").addEventListener("click",btnClickHandler);
+            document.getElementById("outerBox").addEventListener("click", outerClickHandler);
+            document.getElementById("innerBox").addEventListener("click", innerClickHandler);
         });
+        function outerClickHandler(evt){
+           console.log(evt.currentTarget.id, evt.eventPhase, evt.target.id );
+        }
+        function innerClickHandler(evt){
+            console.log(evt.currentTarget.id, evt.eventPhase, evt.target.id );
+        }
+        function btnClickHandler(evt){
+            console.log(evt.currentTarget.id, evt.eventPhase, evt.target.id );
+        }
     </script>
 </head>
 <body>
