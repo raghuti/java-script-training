@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <style>
+        #cb{
+            display: block;
+            margin: 20px auto;  
+        }
+        #outerBox{
+            width: 600px;
+            height: 300px;
+            margin: auto;
+            background-color: cornsilk;
+            border: 1px solid cornsilk;
+        }
+        #innerBox{
+            width: 400px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: orange;
+            border: 1px solid orange;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            display: block;
+            margin: 75px auto;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("btn")
+            .addEventListener("click", function(evt){
+                console.log(evt.target.id," was clicked")
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- #outerBox>#innerBox>button{Click Me} -->
+    <input type="checkbox" id="cb">
+    <div id="outerBox">
+        <div id="innerBox">
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+</body>
+</html>

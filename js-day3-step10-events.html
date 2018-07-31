@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <script>
+    var btns = null;
+    function clickHandler(evt){
+        /*
+        evt.target
+        evt.type
+        */
+        console.log( evt.type );
+    };
+
+    function anchorClickHandler(evt){
+        evt.preventDefault();
+        window.location.href = "http://www.valtech.com";
+    };
+
+    function init(){
+        btns = document.querySelectorAll("button");
+            for(var i = 0 ; i < btns.length; i++){
+                btns[i].addEventListener("click",       clickHandler);
+                btns[i].addEventListener("mouseover",   clickHandler);
+                btns[i].addEventListener("mousedown",   clickHandler);
+                btns[i].addEventListener("mouseover",   clickHandler);
+                btns[i].addEventListener("mouseup",     clickHandler);
+                btns[i].addEventListener("mouseout",    clickHandler);
+            };
+            document.querySelector("a").addEventListener("click", anchorClickHandler)
+    };
+    document.addEventListener("DOMContentLoaded", init );
+    
+    </script>
+</head>
+<body>
+    <button>Click Me 1</button>
+    <button>Click Me 2</button>
+    <button>Click Me 3</button>
+    <button>Click Me 4</button>
+    <hr>
+
+    <a href="http://www.google.com">Google</a>
+
+</body>
+</html>

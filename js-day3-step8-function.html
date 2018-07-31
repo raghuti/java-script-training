@@ -55,12 +55,18 @@
         // console.log( batman.fullname.call(superman, "Hi", "Bangalore") );
         // console.log( batman.fullname.apply(superman, ["Hi", "Bangalore"]) );
         var fun = batman.fullname.bind(superman);
-       console.log( fun("Hi", "Bangalore") );
+       setTimeout(function(){
+        console.log( fun("Hi", "Bangalore") );
+       },4000)
+
+
 
 
     </script>
 </head>
 <body>
-    
+    <ul>
+        <li>list item</li>
+    </ul>
 </body>
 </html>
