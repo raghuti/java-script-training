@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes valtech{
+            0%{
+                transform: translate(0px, 0px) rotate(0deg) ;
+            }
+            10%{
+                transform: translate(20px, 0px) rotate(36deg) ;
+            }
+            20%{
+                transform: translate(40px, 0px) rotate(72deg) ;
+            }
+            30%{
+                transform: translate(60px, 0px) rotate(108deg) ;
+            }
+            40%{
+                transform: translate(80px, 0px) rotate(144deg) ;
+            }
+            50%{
+                transform: translate(100px, 0px) rotate(180deg) ;
+            }
+            60%{
+                transform: translate(80px, 0px) rotate(144deg) ;
+            }
+            70%{
+                transform: translate(60px, 0px) rotate(108deg) ;
+            }
+            80%{
+                transform: translate(40px, 0px) rotate(72deg) ;
+            }
+            90%{
+                transform: translate(20px, 0px) rotate(36deg) ;
+            }
+            100%{
+                transform: translate(0px, 0px) rotate(0deg) ;
+            }
+        }
+        .box{
+            width: 56px;
+            height: 56px;
+            background-image: url("images/grid_only.png")
+        }
+        .box:hover{
+            animation-duration: 2s;
+            animation-name : valtech;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
