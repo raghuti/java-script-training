@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function bodyonload(){
+            document.getElementsByTagName("div")[0].innerHTML += "Body Onload <br/>";
+        };
+        function windowonload(){
+            document.getElementsByTagName("div")[0].innerHTML += "Window Onload <br/>";
+        };
+        function documentloaded(){
+            document.getElementsByTagName("div")[0].innerHTML += "Document Content Loaded <br/> ";
+        };
+        // window.onload = windowonload;
+        window.addEventListener("load", windowonload);
+        document.addEventListener("DOMContentLoaded", documentloaded);
+    </script>
+</head>
+<body onload="bodyonload()">
+    <div class="box"></div>
+</body>
+</html>
