@@ -1,0 +1,7 @@
+[class ^= 'box']{
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin: 2px;
+    background-color: chocolate;
+}
