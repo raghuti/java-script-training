@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+    .box div{
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        margin: 5px;
+        float: left;
+    }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            // document.getElementById("box").innerHTML = "Hello there"
+            // document.getElementsByClassName("box")[0].innerHTML = "Hello there"
+            // document.getElementsByTagName("div")[0].innerHTML = "Hello there"
+            // alert(document.body.childNodes.length)
+            // document.body.childNodes[1].innerHTML = "Hello there";
+            document
+            .querySelector("button")
+            .addEventListener("click", function(){
+                /*
+                var elm = document.createElement("div");
+                elm.innerHTML = "I am a DIV tag";
+                document.querySelector(".box").appendChild(elm);
+                */
+                document.querySelector(".box").innerHTML += "<div> I am a DIV Tag </div>";
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <!-- <div></div> -->
+    <button>Add</button>
+    <hr>
+    <div class="box"></div>
+</body>
+</html>
